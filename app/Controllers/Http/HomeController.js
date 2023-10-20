@@ -4,7 +4,7 @@ class HomeController {
         /*return view.render('welcome', {
             user
         })*/
-        return user;
+        return { user };
     }
 }
 
