@@ -3,7 +3,7 @@ class HomeController {
         const user = await auth.getUser()
 
         return view.render('welcome', {
-            user: user || null
+            user
         })
     }
 }
