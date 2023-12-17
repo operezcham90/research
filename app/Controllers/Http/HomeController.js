@@ -1,11 +1,7 @@
 class HomeController {
-    async index ({ auth, view }) {
-      const user = await auth.getUser()
-  
-      return view.render('root', {
-        user: user || null
-      })
-    }
+  async index({ view }) {
+    return view.render('root')
   }
-  
-  module.exports = HomeController
+}
+
+module.exports = HomeController
