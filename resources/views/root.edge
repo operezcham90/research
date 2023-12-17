@@ -14,20 +14,20 @@
   @loggedIn
   <p>
     Hello {{ auth.user.username }}
+  </p>
   <form method="post" action="/logout">
     <button>Logout</button>
   </form>
-  </p>
   @else
   <p>
+    Not logged in
+  </p>
   <form method="get" action="/login">
     <button>Login</button>
   </form>
-  or
   <form method="get" action="/register">
     <button>Register</button>
   </form>
-  </p>
   @endloggedIn
 </body>
 
