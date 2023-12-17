@@ -1,6 +1,12 @@
 class HomeController {
-  async index({ view }) {
+  index({ view }) {
     return view.render('root')
+  }
+  register({ view }) {
+    return view.render('register')
+  }
+  login({ view }) {
+    return view.render('login')
   }
 }
 

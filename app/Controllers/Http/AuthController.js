@@ -3,12 +3,6 @@
 const User = use('App/Models/User')
 
 class AuthController {
-    showRegisterForm({ view }) {
-        return view.render('register')
-    }
-    showLoginForm({ view }) {
-        return view.render('login')
-    }
     async register({ request, response }) {
         const userData = request.only(['username', 'email', 'password'])
         const user = await User.create(userData)
