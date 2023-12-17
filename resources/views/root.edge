@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hola</title>
+  <title>Root</title>
   <link href="/favicon.svg" rel="icon" type="image/svg+xml">
   <link href="/water.css" rel="stylesheet">
 </head>
@@ -12,21 +12,18 @@
 <body>
   <h1>Root</h1>
   @loggedIn
-  <p>
-    Hello {{ auth.user.username }}
-  </p>
+  <p>Hello {{ auth.user.username }}</p>
   <form method="post" action="/logout">
-    <button>Logout</button>
+    {{ csrfField() }}
+    <button>Logout 👤</button>
   </form>
   @else
-  <p>
-    Not logged in
-  </p>
+  <p>Not logged in</p>
   <form method="get" action="/login">
-    <button>Login</button>
+    <button>Login 👤</button>
   </form>
   <form method="get" action="/register">
-    <button>Register</button>
+    <button>Register 👥</button>
   </form>
   @endloggedIn
 </body>
