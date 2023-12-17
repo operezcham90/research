@@ -16,7 +16,7 @@ class AuthController {
     }
     async login({ request, response, auth }) {
         const { email, password } = request.all()
-        const token = { email, password }
+        const token = await auth.attempt(email, password)
         return response.json(token)
     }
     async logout({ auth, response }) {
