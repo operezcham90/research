@@ -9,4 +9,8 @@
 
 # Views
 
+* Root
+* Register
+* Logout
+
 # Controllers
