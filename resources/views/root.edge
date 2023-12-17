@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hola</title>
   <link href="/favicon.svg" rel="icon" type="image/svg+xml">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+  <link href="/water.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Hola</h1>
+  <h1>Root</h1>
   @loggedIn
-  <h2> Hello {{ auth.user.username }} </h2>
+  <p>
+    Hello {{ auth.user.username }}
+  <form method="post" action="/logout">
+    <button>Logout</button>
+  </form>
+  </p>
   @else
-  <p> Please login </p>
+  <p>
+  <form method="get" action="/login">
+    <button>Login</button>
+  </form>
+  or
+  <form method="get" action="/register">
+    <button>Register</button>
+  </form>
+  </p>
   @endloggedIn
 </body>
 
